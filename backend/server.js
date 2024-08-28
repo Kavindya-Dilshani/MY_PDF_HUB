@@ -5,6 +5,7 @@ import winston from "winston";
 import morgan from "morgan";
 import config from "./config/config.json" assert { type: "json" };
 import authRoutes from "./routes/auth.routes.js";
+import fileRoutes from "./routes/file.routes.js";
 
 // Initialize Express application
 const app = express();
@@ -64,6 +65,7 @@ app.get("/", (req, res) => {
 
 /*routes */
 authRoutes(app);
+fileRoutes(app);
 
 // Set port, listen for requests
 const PORT = config.serverPort || 5000;
