@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import winston from "winston";
 import morgan from "morgan";
 import config from "./config/config.json" assert { type: "json" };
+import authRoutes from "./routes/auth.routes.js";
 
 // Initialize Express application
 const app = express();
@@ -60,6 +61,9 @@ mongoose
 app.get("/", (req, res) => {
   res.json({ message: "I'm alive" });
 });
+
+/*routes */
+authRoutes(app);
 
 // Set port, listen for requests
 const PORT = config.serverPort || 5000;
