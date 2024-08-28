@@ -42,8 +42,9 @@
 4. **Set up environment variables:**
    
    ```bash
-   MONGO_URI=your_mongodb_uri
-   JWT_SECRET=your_jwt_secret
+   SERVER_PORT=5000
+   FRONT_END_URL=http://localhost:3000
+   DATABASE_URL=mongodb://127.0.0.1:27017/PDFHubDB
 
 5. **Set up environment variables:**
    
