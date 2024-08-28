@@ -1,0 +1,5 @@
+{
+  "auth": {
+    "jwtSecretKey": "ADD_YOUR_JWT_SECRET_KEY"
+  }
+}
